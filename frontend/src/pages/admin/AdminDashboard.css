@@ -1,0 +1,109 @@
+.admin-dashboard {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.admin-dashboard h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.card {
+  flex: 1;
+  min-width: 120px;
+  background: #f0f4f7;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.card h3 {
+  color: #34495e;
+  margin-bottom: 8px;
+}
+.card p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Tables */
+.admin-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.admin-table {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+.admin-table h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+.admin-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-table th, .admin-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.admin-table th {
+  background: #2980b9;
+  color: white;
+  border-radius: 6px;
+}
+.approve-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.approve-btn:hover { background-color: #2ecc71; }
+.reject-btn {
+  padding: 5px 10px;
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.reject-btn:hover { background-color: #e74c3c; }
+
+/* Notifications */
+.notifications-list {
+  list-style: none;
+  padding-left: 0;
+}
+.notifications-list li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+.notifications-list li.unread {
+  background-color: #ecf0f1;
+  font-weight: bold;
+}
+.notifications-list li.read {
+  background-color: #f7f9fa;
+}

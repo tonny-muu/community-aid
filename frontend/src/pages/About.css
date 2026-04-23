@@ -1,0 +1,305 @@
+/* ================= GLOBAL STYLES ================= */
+.about-page, .about-page * {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= HERO SECTION ================= */
+.about-hero {
+  position: relative;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ff4757;
+  transform: translateY(-3px);
+}
+
+/* ================= MISSION SECTION ================= */
+.mission-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ================= IMPACT SECTION ================= */
+.impact-section {
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.impact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.impact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.impact-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  min-width: 250px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.impact-icon {
+  font-size: 2rem;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+/* ================= STORY SECTION ================= */
+.story-section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.story-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.story-section p, .story-section ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.story-section ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* ================= TEAM SECTION ================= */
+.team-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05);
+}
+
+.team-member h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ================= TESTIMONIAL SECTION ================= */
+.testimonial-section {
+  padding: 4rem 2rem;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  max-width: 600px;
+  margin: 1rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: #ff6b6b;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+/* ================= GALLERY ================= */
+.gallery-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* ================= CTA ================= */
+.cta-section {
+  background: #2c3e50;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ================= ANIMATIONS ================= */
+.animated {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.fadeInDown { animation: fadeInDown 1s ease forwards; }
+.fadeInUp { animation: fadeInUp 1s ease forwards; }
+.zoomIn { animation: zoomIn 1s ease forwards; }
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeInDown {
+  0% { opacity:0; transform: translateY(-30px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity:0; transform: translateY(30px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  0% { opacity:0; transform: scale(0.8); }
+  100% { opacity:1; transform: scale(1); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px){
+  .impact-cards { flex-direction: column; }
+}
+
+@media(max-width: 768px){
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media(max-width: 500px){
+  .team-grid { grid-template-columns: 1fr; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+}

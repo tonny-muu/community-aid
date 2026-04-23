@@ -1,0 +1,69 @@
+/* src/pages/auth/Login.css */
+
+.auth-wrapper {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff8e1; /* soft gold background */
+  border: 2px solid #ffd700; /* gold border */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.auth-wrapper h2 {
+  margin-bottom: 20px;
+  color: #b8860b; /* darker gold */
+}
+
+.auth-wrapper p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.auth-wrapper input,
+.auth-wrapper select {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  border: 1px solid #ffd700;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.auth-wrapper input:focus,
+.auth-wrapper select:focus {
+  border-color: #b8860b;
+  box-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
+}
+
+.auth-wrapper button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #b8860b;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-wrapper button:hover {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.auth-wrapper span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.auth-wrapper span:hover {
+  color: #b8860b;
+}
