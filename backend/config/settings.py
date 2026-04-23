@@ -9,9 +9,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # =========================
 SECRET_KEY = 'django-insecure-@*t96o3k0@#rs_rv35e8b2t9eo8yww$c+dd7vdx*_3=9n74*y0'
 
-DEBUG = True  # CHANGE TO False IN PRODUCTION
+DEBUG = True  # change to False in production
 
-ALLOWED_HOSTS = []  # add your domain later
+ALLOWED_HOSTS = ["*"]  # Render will require this
 
 
 # =========================
@@ -38,9 +38,10 @@ INSTALLED_APPS = [
 # MIDDLEWARE
 # =========================
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # must be on top
-
     'django.middleware.security.SecurityMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
 
@@ -94,14 +95,12 @@ AUTH_USER_MODEL = 'api.User'
 
 
 # =========================
-# REST FRAMEWORK (CURRENT DEV MODE)
+# REST FRAMEWORK
 # =========================
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-
-    # DEV MODE: everything open
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
@@ -112,18 +111,10 @@ REST_FRAMEWORK = {
 # PASSWORD VALIDATION
 # =========================
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
 
@@ -131,9 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # INTERNATIONALIZATION
 # =========================
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'Africa/Kampala'
-
 USE_I18N = True
 USE_TZ = True
 
@@ -142,6 +131,9 @@ USE_TZ = True
 # STATIC FILES
 # =========================
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # =========================
@@ -152,6 +144,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # =========================
-# CORS (REACT FRONTEND)
+# CORS (React frontend)
 # =========================
 CORS_ALLOW_ALL_ORIGINS = True
